@@ -7,17 +7,18 @@ CREATE TABLE employee (
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INT NOT NULL,
-    manager_id INT NOT NULL,
+    manager_id INT,
 );
 
 CREATE TABLE role (
     id INT AUTO_INCREMENT,
     title VARCHAR(30),
-    salary FLOAT,
+    salary DECIMAL,
     department_id INT,
 );
 
 CREATE TABLE department (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    department INT AUTO_INCREMENT PRIMARY KEY,
     department_name VARCHAR(30) NOT NULL,
+    department_id INT 
 );
