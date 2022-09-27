@@ -1,11 +1,13 @@
+USE etracker_db;
+
 INSERT INTO employee (first_name, last_name, role_id, manger_id)
 VALUES
-('Mike', 'Chan', 01, ),
-('Ashley', 'Rodriguez', 02),
+('Mike', 'Chan', 01, NULL),
+('Ashley', 'Rodriguez', 02, NULL),
 ('Kevin', 'Tupik', 03, 02),
-('Kunal', 'Singh', 04),
-('Malia', 'Brown' 05, 04),
-('Sarah', 'Lourd', 06),
+('Kunal', 'Singh', 04, NULL),
+('Malia', 'Brown', 05, 04),
+('Sarah', 'Lourd', 06, NULL),
 ('Tom', 'Allen', 07, 06);
 
 INSERT INTO role (title, salary, department_id)
