@@ -7,5 +7,7 @@ const writeFile = (fileContent) => {
     } else {
       console.log('Team profile has been generated.')
     }
-  })
-}
+  });
+};
+
+module.exports = writeFile;
