@@ -1,21 +1,32 @@
 const Employee = require("../lib/Employee");
 
-test('creates new employee', () => {
-  const employee = new Employee('Jim Jones', 12345, 'jim@jones.com');
+describe("Employee", () => {
+  describe('Initialization', () => {
+    it('', () => {
+      const employee = new Employee('Jim Jones', 1, 'jim@jones.com');
 
-  expect(employee.name).toBe('Jim Jones');
-  expect(employee.id).toEqual(expect.any(Number));
-  expect(employee.email).toBe(expect.any(String));
+      expect(employee.name).toEqual('Jim Jones');
+      expect(employee.id).teEqual(String);
+      expect(employee.email).toBe(expect.any(String));
+    });
 
-});
+    it('should throw an err if provided no arguments', () => {
+      const cb = () => new Employee();
 
+      expect(cb).toThrow();
+    });
 
-test('checks for Employee class', () => {
-  const employee = new Employee('Jim Jones', 12345, 'jim@jones.com');
+    it("should throw an error if 'name' is not a string", () => {
+      const cb = () => new Employee(3, 2);
+      const err = new Error("Expected parameter 'name' to be a non-empty string");
 
-  expect(employee.getName()).toBe(employee.name);
-  expect(employee.getId()).toEqual(employee.id);
-  expect(employee.getEmail()).toBe(employee.email);
-  expect(employee.getRole()).toBe('Employee');
+      expect(cb).toThrowError(err);
+    });
 
+    it('should throw an error if "email" is not a string', () => {
+      const cb = () => new Employee(3, 2);
+      const err = new Error('expected parameter "email" to be string');
+      expect(cb).toThrowError(err);
+    });
+  })
 });
