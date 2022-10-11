@@ -3,7 +3,8 @@
 # Table of Contents
 * [Description](#description)
 * [How to use](#use)
-* [Visuals](#visuals)
+* [Test Visuals](#testvisuals)
+* [App Visuals](#appvisuals)
 * [Links](#links)
 
 ## Description
@@ -14,10 +15,11 @@
 
 
 
-## Visuals
+## Test Visuals
+Used Jest for testing
+![Jest Test](./images/testResults.png)
 
 
 
 ## Links
 [Github Repository]()
-[Live site]()
