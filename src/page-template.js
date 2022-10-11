@@ -5,8 +5,8 @@ const generateTeam = team => {
     // create the manager html
     const generateManager = manager => {
         return `
-        <div>
-            <div>
+        <div class="card">
+            <div class="card-header">
                 <h2>${manager.getName()}</h2>
                 <h3>
                     <i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}
