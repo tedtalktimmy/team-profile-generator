@@ -17,7 +17,7 @@ const manQuestions = () => {
     answers = new Manager(answers.name, answers.id, answers.email)
     teamProfiles.push(answers);
     return employeePrompt();
-  })
+  });
 }
 
 const engineerQuestions = () => {
@@ -25,7 +25,7 @@ const engineerQuestions = () => {
     answers = new Engineer(answers.name, answers.id, answers.email, answers.github)
     teamProfiles.push(answers);
     return employeePrompt();
-  })
+  });
 }
 
 const intQuestions = () => {
@@ -33,7 +33,7 @@ const intQuestions = () => {
     answers = new Intern(answers.name, answers.id, answers.email, answers.school)
     teamProfiles.push(answers);
     return employeePrompt();
-  })
+  });
 }
 
 const employeePrompt = () => {
@@ -45,18 +45,18 @@ const employeePrompt = () => {
       {name: 'Engineer', value: 'addEngineer'},
       {name: 'Intern', value: 'addIntern'},
       {name: 'DONE', value: 'done'}
-    ]
+    ],
   }])
-  .then(answer => {
-    if (answer.employeeType === 'addEngineer') {engineerQuestions(); };
-    if (answer.employeeType === 'addIntern') {intQuestions(); };
-    if(answer.employeeType === 'done') {
+  .then((answers) => {
+    if (answers.employeeType === 'addEngineer') {engineerQuestions(); };
+    if (answers.employeeType === 'addIntern') {intQuestions(); };
+    if (answers.employeeType === 'done') {process.exit[0]} {
       if(!fs.existsSync(OUTPUT_DIR)) {
         fs.mkdirSync(OUTPUT_DIR)
-      }
-      fs.writeFileSync(outputPath, pageTemplate(teamProfiles));
+      } else {
+      fs.writeFileSync(outputPath, pageTemplate(teamProfiles))};
     }
-  })
+  });
 }
 
 init();

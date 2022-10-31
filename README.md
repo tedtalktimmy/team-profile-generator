@@ -5,7 +5,6 @@
 * [User Story](#userstory)
 * [How to use](#use)
 * [Test Visuals](#testvisuals)
-* [HTML Visuals](#htmlvisuals)
 * [Video Demo](#videodemo)
 * [Links](#links)
 
@@ -49,6 +48,11 @@ THEN I exit the application, and the HTML is generated
 ## Test Visuals
 Used Jest for testing
 ![Jest Test](./images/testResults.png)
+
+
+## Video Demo
+[Walkthrough](./images/vidWalkthrough/teamProfileGenerator.mp4)
+
 
 
 
